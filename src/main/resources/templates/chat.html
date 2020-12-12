@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+
+</head>
+<body>
+<p th:text="Вас зовут: ${name}"></p>
+<form action="/messages" method="post">
+    <ul>
+        <li>
+            <label for="message" th:text="${name}">Сообщение:</label>
+            <input type="text" id="message" name="text">
+        </li>
+        <button type="submit">Отправить</button>
+    </ul>
+</form>
+</body>
+</html>
